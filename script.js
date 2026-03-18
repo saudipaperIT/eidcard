@@ -24,29 +24,37 @@ nameDisplay.style.right="auto";
 }
 
 }
-function downloadCard() {
+function downloadCard(){
 
 const card = document.getElementById("card");
 
-html2canvas(card,{
-scale:2,
-useCORS:true,
-backgroundColor:null
-}).then(function(canvas){
+html2canvas(card, {
+    scale: 3,
+    useCORS: true
+}).then(canvas => {
 
-const link = document.createElement("a");
+    // نحولها إلى صورة
+    canvas.toBlob(function(blob){
 
-link.download = "EidCard.png";
-link.href = canvas.toDataURL("image/png");
+        const url = URL.createObjectURL(blob);
 
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
+        const a = document.createElement("a");
+        a.href = url;
+
+        const name = document.getElementById("nameInput").value || "User";
+
+        a.download = "Eid_" + name + ".png";
+
+        document.body.appendChild(a);
+        a.click();
+
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+
+    }, "image/png");
 
 });
-
 }
-
 function setArabic(){
 
 document.getElementById("title").innerHTML="بطاقة تهنئة العيد";
