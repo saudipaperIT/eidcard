@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Eid Card</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="top-bar">
+
+<button onclick="setArabic()" class="lang-btn">
+<i class="fa-solid fa-globe"></i> عربي
+</button>
+
+<button onclick="setEnglish()" class="lang-btn">
+<i class="fa-solid fa-language"></i> English
+</button>
+
+</div>
+
+<div class="container">
+
+<h1 id="title">
+بطاقة تهنئة العيد
+</h1>
+
+<div class="controls">
+
+<div class="input-box">
+
+<i class="fa-solid fa-user"></i>
+
+<input
+type="text"
+id="nameInput"
+placeholder="اكتب اسمك هنا">
+
+</div>
+
+<button onclick="generateCard()" class="btn-create">
+
+<i class="fa-solid fa-wand-magic-sparkles"></i>
+
+<span id="createText">إنشاء البطاقة</span>
+
+</button>
+
+<button onclick="downloadCard()" class="btn-download">
+
+<i class="fa-solid fa-download"></i>
+
+<span id="downloadText">تحميل الصورة</span>
+
+</button>
+
+</div>
+
+<div class="card-container" id="card">
+
+<img id="cardImage" src="images/card.jpeg">
+
+<div id="nameDisplay"></div>
+
+</div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+<div id="splash">
+
+    <div class="splash-content">
+
+        <img src="images/logo.png" class="splash-logo">
+
+        <h2 class="splash-text">
+            عيدكم مبارك من المجموعة السعودية للورق
+        </h2>
+
+    </div>
+
+</div>
+</html>
