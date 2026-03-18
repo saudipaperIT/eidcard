@@ -265,7 +265,9 @@ width:95%;
 
 #nameDisplay{
 font-size:22px;
-bottom:50px;
-}
+  
+bottom:70px;
+right:70px;
+left:auto;
 
 }
