@@ -256,3 +256,16 @@ visibility:hidden;
 }
 
 }
+
+@media (max-width:768px){
+
+.card-container img{
+width:95%;
+}
+
+#nameDisplay{
+font-size:22px;
+bottom:50px;
+}
+
+}
