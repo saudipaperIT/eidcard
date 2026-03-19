@@ -23,26 +23,28 @@ if (arabic.test(name)) {
 }
 
 }
-function downloadCard() {
+function downloadCard(){
 
 const card = document.getElementById("card");
 
-html2canvas(card,{
-scale:2,
-useCORS:true,
-backgroundColor:null
-}).then(function(canvas){
+html2canvas(card, {
+    scale:3,
+    useCORS:true,
+    backgroundColor:null
+}).then(canvas => {
 
-const link = document.createElement("a");
+    const link = document.createElement("a");
 
-link.download = "EidCard.png";
-link.href = canvas.toDataURL("image/png");
+    const name = document.getElementById("nameInput").value || "User";
 
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
+    link.download = "Eid_" + name + ".png";
+    link.href = canvas.toDataURL("image/png");
+
+    link.click();
 
 });
+
+}
 
 function setArabic(){
 
