@@ -149,7 +149,7 @@ background:none;
 .card-container img{
 
 display:block;
-width:750px; /* أو نفس مقاسك */
+width:700px; /* أو نفس مقاسك */
 height:auto;
 
 
@@ -268,6 +268,6 @@ width:95%;
 font-size:18px;
   
 bottom:40px;
-right:65px;
+right:55px;
 
 }
