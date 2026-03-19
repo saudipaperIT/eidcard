@@ -261,13 +261,16 @@ visibility:hidden;
 @media (max-width:768px){
 
 .card-container img{
-width:95%;
+    width:95%;
+   display:block;
+    margin:0 auto;
 }
 
 #nameDisplay{
-font-size:18px;
-  
-bottom:40px;
-right:55px;
+bottom:50px;        /* تحكم عمودي */
+    font-size:22px;     /* حجم مناسب للجوال */
+    right:5%;           /* مكان عربي */
+    left:auto;
+    text-align:right;   /* لتجنب الهامش الأبيض */
 
 }
