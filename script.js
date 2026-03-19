@@ -6,20 +6,19 @@ const nameDisplay = document.getElementById("nameDisplay");
 nameDisplay.innerText = name;
 
 const arabic = /[\u0600-\u06FF]/;
+const nameDisplay = document.getElementById("nameDisplay");
 const isMobile = window.innerWidth <= 768;
 
-if (arabic.test(name)) {
-
+if(arabic.test(name)){
     nameDisplay.style.direction = "rtl";
     nameDisplay.style.right = isMobile ? "5%" : "70px";
     nameDisplay.style.left = "auto";
-
-} else {
-
+    nameDisplay.style.textAlign = "right";
+}else{
     nameDisplay.style.direction = "ltr";
     nameDisplay.style.left = isMobile ? "5%" : "70px";
     nameDisplay.style.right = "auto";
-
+    nameDisplay.style.textAlign = "left";
 }
 
 }
