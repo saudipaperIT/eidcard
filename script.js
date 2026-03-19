@@ -5,21 +5,20 @@ const nameDisplay = document.getElementById("nameDisplay");
 
 nameDisplay.innerText = name;
 
-const arabicPattern = /[\u0600-\u06FF]/;
+const arabic = /[\u0600-\u06FF]/;
+const isMobile = window.innerWidth <= 768;
 
-if(arabicPattern.test(name)){
+if (arabic.test(name)) {
 
-nameDisplay.style.direction="rtl";
-nameDisplay.style.textAlign="right";
-nameDisplay.style.right="70px";
-nameDisplay.style.left="auto";
+    nameDisplay.style.direction = "rtl";
+    nameDisplay.style.right = isMobile ? "5%" : "70px";
+    nameDisplay.style.left = "auto";
 
-}else{
+} else {
 
-nameDisplay.style.direction="ltr";
-nameDisplay.style.textAlign="left";
-nameDisplay.style.left="70px";
-nameDisplay.style.right="auto";
+    nameDisplay.style.direction = "ltr";
+    nameDisplay.style.left = isMobile ? "5%" : "70px";
+    nameDisplay.style.right = "auto";
 
 }
 
